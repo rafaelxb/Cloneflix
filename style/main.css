@@ -1,0 +1,293 @@
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+body {
+  background: var(--preto);
+  font-family: 'Arial', Times, serif;  
+  color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px; 
+}
+
+header .busca{
+    background-color: var(--preto);
+    border:solid 2px;
+    border-radius:15px;
+    width: 280px;
+    border-color: #AAA;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+header .box-busca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:15px;
+    border:none;
+    height:25px;
+    width:250px;
+    margin-right: 6px;
+    color: #AAA;
+}
+
+header .botaobusca{
+    width: 15px;
+    background-color:  #AAA;
+    margin-top: 4px;
+    margin-right: 4px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/*tira a bordar quando a imput é selecionada*/
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0; }
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: #fff;
+}
+
+/*filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/Capa-Vikings-Horizontal.jpg');
+   
+    height: 400px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: justify;
+} 
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.filme-principal .informacoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 220px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.filme-principal .informacoes .relevancia{
+    color: rgb(18, 219, 18);
+    
+}
+
+.filme-principal .informacoes .censura{
+    max-width: 20px;
+    max-height: 20px;
+    border-radius: 6px;
+    
+}
+
+.filme-principal .botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 10px 10px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 7px;
+}
+
+.container{
+    margin-left: 30px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.div-sugestoes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    font-style: italic;
+    color: #AAA;
+    font-size: 20px;
+}
+
+.carrosel-itens{
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.botao-play {
+    display:none;
+
+}
+
+.box-filme:hover{
+    border: solid 2px;
+    border-color: white;
+
+}
+
+.item i{
+    display:none;
+}
+
+.item:hover i{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px;
+    border-color: white;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.youtube-window{
+    background-color: black;
+}
+
+.mais-info{
+    background-color: var(--preto);
+
+}
+
+.mais-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.mais-info .image-mais-info{
+    max-width: 100%;
+    max-height: 100%;
+    align-items: center;
+    margin-top: 30px;
+    border: none;    
+}
+
+.mais-info .informacoes{
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.mais-info .informacoes .titulo{
+    
+    margin-bottom: 10px;
+}
+
+.mais-info .informacoes .serie-info{
+    margin-bottom: 10px;
+    text-align: justify;
+    
+}
+
+.mais-info .informacoes .botao-temporadas{
+    background-color: rgba(112, 112, 112, 0.5);
+    border: solid 1px;
+    color: white;
+
+    padding: 1.5px 1.5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    font-size: 11.5px;
+
+    cursor: pointer;
+}
+
+.mais-info .informacoes .temporadas{
+    color: white;
+    max-width: 100%;
+    padding-right: 2px;
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+.episodios{
+    background-color: red;
+    color: black;
+    border-radius: 30%;
+    border: none;
+    font-size: 12px;
+    padding: 2px 2px;
+    margin-right: 2px;
+}
+
